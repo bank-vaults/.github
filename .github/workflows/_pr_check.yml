@@ -1,0 +1,57 @@
+name: _pr_check
+
+on:
+  workflow_call:
+    inputs:
+      # New line separated list of valid commit types => type(scope): message
+      commit-types:
+        type: string
+        required: false
+      # New line separated list of valid commit scopes => type(scope): message
+      commit-scopes:
+        type: string
+        required: false
+
+jobs:
+  validate-title:
+    name: Validate title
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        id: lint_pr_title
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: ${{ inputs.commit-types }}
+          scopes: ${{ inputs.commit-scopes }}
+
+      # Leave a comment if linter reports an error
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: always() && (steps.lint_pr_title.outputs.error_message != null)
+        with:
+          header: pr-title-lint-error
+          message: |
+            Hey there and thank you for opening this pull request! 👋🏼
+            
+            We require pull request titles to follow the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) and it looks like your proposed title needs to be adjusted.
+
+            Details:
+            
+            ```
+            ${{ steps.lint_pr_title.outputs.error_message }}
+            ```
+      
+      # Hide error message if the PR title has been fixed
+      - if: ${{ steps.lint_pr_title.outputs.error_message == null }}
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-title-lint-error
+          delete: true
+
+  validate-commits:
+    name: Validate commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Morishiri/block-merge-commits-action@v1.0.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
