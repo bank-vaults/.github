@@ -9,7 +9,7 @@
 
 - name: 'lifecycle/stale'
   color: '795648'
-  description: 'Denotes an issue or PR has remained open with no activity and has become stale and will be auto-closed.'
+  description: 'Denotes an issue or PR that has become stale and will be auto-closed.'
 
 - name: 'lifecycle/keep'
   color: 'd3e1f1'
