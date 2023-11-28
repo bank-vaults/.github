@@ -1,0 +1,104 @@
+# Lifecycle
+- name: 'approved'
+  color: '13fa16'
+  description: 'Indicates the PR has been approved by an approver from all required OWNERS files.'
+
+- name: 'lifecycle/active'
+  color: '8fc951'
+  description: 'Indicates that an issue or PR is actively being worked on by a contributor.'
+
+- name: 'lifecycle/stale'
+  color: '795648'
+  description: 'Denotes an issue or PR has remained open with no activity and has become stale and will be auto-closed.'
+
+- name: 'lifecycle/keep'
+  color: 'd3e1f1'
+  description: 'Denotes an issue or PR that should be preserved from going stale.'
+
+- name: 'duplicate'
+  color: cfd3d7
+  description: 'This issue or pull request already exists'
+
+- name: 'good first issue'
+  color: 7057ff
+  description: 'Good for newcomers'
+
+# Size labels
+- name: 'size/XS'
+  color: '009900'
+  description: 'Denotes a PR that changes 0-9 lines'
+
+- name: 'size/S'
+  color: '77bb02'
+  description: 'Denotes a PR that changes 10-49 lines'
+
+- name: 'size/M'
+  color: 'eebb03'
+  description: 'Denotes a PR that changes 50-99 lines'
+
+- name: 'size/L'
+  color: 'ee9902'
+  description: 'Denotes a PR that changes 100-499 lines'
+
+- name: 'size/XL'
+  color: 'ed5500'
+  description: 'Denotes a PR that changes 500+ lines'
+
+# Kind
+- name: 'kind/design'
+  color: 'c7def7'
+  description: 'Categorizes issue or PR as related to design.'
+
+- name: 'kind/documentation'
+  color: 'c7def7'
+  description: 'Categorizes issue or PR as related to documentation.'
+
+- name: 'kind/feature'
+  color: 'c7def7'
+  description: 'Categorizes issue or PR as related to a new feature.'
+
+- name: 'kind/enhancement'
+  color: 'c7def7'
+  description: 'Categorizes issue or PR as related to a new feature.'
+
+- name: 'kind/cleanup'
+  color: 'c7def7'
+  description: 'Categorizes issue or PR as related to cleaning up code, process, or technical debt.'
+
+- name: 'kind/bug'
+  color: 'e11d21'
+  description: 'Categorizes issue or PR as related to a bug.'
+
+# Area
+- name: 'area/api'
+  color: '0052cc'
+- name: 'area/cli'
+  color: '0052cc'
+- name: 'area/test'
+  color: '0052cc'
+- name: 'area/auth'
+  color: '0052cc'
+- name: 'area/storage'
+  color: '0052cc'
+- name: 'area/security'
+  color: '0052cc'
+
+- name: 'area/build'
+  color: '0052cc'
+- name: 'area/pipeline'
+  color: '0052cc'
+- name: 'area/artifacts'
+  color: '0052cc'
+- name: 'area/dependencies'
+  color: '0052cc'
+
+- name: 'area/provider/gcp'
+  color: '0052cc'
+- name: 'area/provider/aws'
+  color: '0052cc'
+- name: 'area/provider/azure'
+  color: '0052cc'
+- name: 'area/provider/alibaba'
+  color: '0052cc'
+- name: 'area/provider/vault'
+  color: '0052cc'

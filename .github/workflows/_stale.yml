@@ -6,19 +6,19 @@ on:
       days-until-stale:
         type: number
         required: false
-        default: 15
+        default: 60
       days-until-close:
         type: number
         required: false
-        default: 30
+        default: 20
       stale-label:
         type: string
         required: false
-        default: "stale"
+        default: "lifecycle/stale"
       exempt-label:
         type: string
         required: false
-        default: "keep"
+        default: "lifecycle/keep"
 
 jobs:
   stale:

@@ -1,4 +1,4 @@
-name: stale-check
+name: sync
 
 on:
   schedule:
@@ -11,8 +11,8 @@ jobs:
     permissions:
       issues: write
       pull-requests: write
-    with:
-      days-until-stale: 60
-      days-until-close: 20
-      stale-label: "stale"
-      exempt-label: "keep"
+
+  sync:
+    uses: ./.github/workflows/_sync.yml
+    permissions:
+      issues: write
