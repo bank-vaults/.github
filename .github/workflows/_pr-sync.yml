@@ -1,16 +1,9 @@
-name: _pr_check
+# This action needs works for "pull_request" and "pull_request_target" triggers
+
+name: _pr-sync
 
 on:
   workflow_call:
-    inputs:
-      # New line separated list of valid commit types => type(scope): message
-      commit-types:
-        type: string
-        required: false
-      # New line separated list of valid commit scopes => type(scope): message
-      commit-scopes:
-        type: string
-        required: false
 
 jobs:
   validate-title:
@@ -21,9 +14,6 @@ jobs:
         id: lint_pr_title
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          types: ${{ inputs.commit-types }}
-          scopes: ${{ inputs.commit-scopes }}
 
       # Leave a comment if linter reports an error
       - uses: marocchino/sticky-pull-request-comment@v2
@@ -55,3 +45,28 @@ jobs:
       - uses: Morishiri/block-merge-commits-action@v1.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  size-labeler:
+    runs-on: ubuntu-latest
+    name: Label size
+    steps:
+      - uses: codelytv/pr-size-labeler@v1.7.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          xs_label: 'size/XS'
+          xs_max_size: '10'
+          s_label: 'size/S'
+          s_max_size: '100'
+          m_label: 'size/M'
+          m_max_size: '500'
+          l_label: 'size/L'
+          l_max_size: '1000'
+          xl_label: 'size/XL'
+          fail_if_xl: 'false'
+          message_if_xl: >
+            This PR exceeds the recommended size of 1000 lines.
+            Please make sure you are NOT addressing multiple issues with one PR.
+            Note that this PR might be rejected due to its size.
+          github_api_url: 'api.github.com'
+          files_to_ignore: |
+            "*.md"

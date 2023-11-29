@@ -1,4 +1,6 @@
-name: _stale
+# This action works for any trigger
+
+name: _project-sync
 
 on:
   workflow_call:
@@ -22,6 +24,7 @@ on:
 
 jobs:
   stale:
+    name: Mark stale
     runs-on: ubuntu-latest
     steps:
       - name: 📆 mark stale activity
@@ -56,3 +59,23 @@ jobs:
             This PR has been marked `stale` for ${{ inputs.days-until-close }}
             days, and is now closed due to inactivity. If this contribution is
             still relevant, please re-open this PR or file a new one. Thank you!
+
+  labels:
+    name: Sync project labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: EndBug/label-sync@v2
+        with:
+          # If you want to use a config file, you can put its path or URL here, multiple files are also allowed (more info in the paragraphs below)
+          # TODO (@ramizpolic): Enable per-project labels via e.g. .github/labels.yml in workflow_call
+          config-file: |
+            https://raw.githubusercontent.com/bank-vaults/.github/main/.github/labels.yml
+
+          # If you want to delete any additional label, set this to true
+          delete-other-labels: false
+
+          # If you want the action just to show you the preview of the changes, without actually editing the labels, set this to true
+          dry-run: false
+
+          # You can change the token used to change the labels, this is the default one
+          token: ${{ secrets.GITHUB_TOKEN }}
