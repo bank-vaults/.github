@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
-    uses: ./.github/workflows/_project-sync.yml
+  common:
+    uses: ./.github/workflows/_project-common.yml
     permissions:
       issues: write
       pull-requests: write

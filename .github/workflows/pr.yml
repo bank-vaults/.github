@@ -9,8 +9,8 @@ on:
       - synchronize
 
 jobs:
-  sync:
-    uses: ./.github/workflows/_pr-sync.yml
+  common:
+    uses: ./.github/workflows/_pr-common.yml
     permissions:
       pull-requests: write
       issues: write

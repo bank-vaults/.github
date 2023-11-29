@@ -1,6 +1,6 @@
 # This action needs works for "pull_request" and "pull_request_target" triggers
 
-name: _pr-sync
+name: _pr-common
 
 on:
   workflow_call:
