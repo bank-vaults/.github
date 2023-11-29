@@ -1,6 +1,6 @@
 # This action works for any trigger
 
-name: _project-sync
+name: _project-common
 
 on:
   workflow_call:
