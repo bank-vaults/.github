@@ -30,19 +30,19 @@
 
 - name: 'size/S'
   color: '77bb02'
-  description: 'Denotes a PR that changes 10-49 lines'
+  description: 'Denotes a PR that changes 10-99 lines'
 
 - name: 'size/M'
   color: 'eebb03'
-  description: 'Denotes a PR that changes 50-99 lines'
+  description: 'Denotes a PR that changes 100-499 lines'
 
 - name: 'size/L'
   color: 'ee9902'
-  description: 'Denotes a PR that changes 100-499 lines'
+  description: 'Denotes a PR that changes 500-999 lines'
 
 - name: 'size/XL'
   color: 'ed5500'
-  description: 'Denotes a PR that changes 500+ lines'
+  description: 'Denotes a PR that changes 1000+ lines'
 
 # Kind
 - name: 'kind/design'
