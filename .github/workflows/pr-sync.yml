@@ -1,4 +1,4 @@
-name: pr-sync
+name: PR
 
 on:
   pull_request_target:
@@ -9,13 +9,8 @@ on:
       - synchronize
 
 jobs:
-  check:
-    uses: ./.github/workflows/_pr_check.yml
-    permissions:
-      pull-requests: write
-
   sync:
-    uses: ./.github/workflows/_pr_sync.yml
+    uses: ./.github/workflows/_pr-sync.yml
     permissions:
       pull-requests: write
       issues: write
