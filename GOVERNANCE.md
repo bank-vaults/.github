@@ -12,6 +12,7 @@ Users are the foundation of the Bank-Vaults community. They utilize the project 
 - Report issues and suggest improvements
 - Participate in discussions on our communication channels
 - Contribute to documentation by reporting unclear or outdated sections
+- Add themselves to our [adopters list](https://github.com/bank-vaults/bank-vaults/blob/main/ADOPTERS.md)
 
 ### Contributors
 
@@ -47,7 +48,7 @@ We welcome contributions from everyone. To get started:
 
 1. Fork the repository
 2. Create a new branch for your changes
-3. Make your changes and commit them with clear, descriptive messages
+3. Make your changes and commit them with clear, descriptive messages, signed off by the author
 4. Open a pull request with a detailed description of your changes
 
 All contributions will be reviewed by maintainers and/or experienced contributors.
@@ -58,7 +59,7 @@ Bank-Vaults adheres to its [Code of Conduct](https://bank-vaults.dev/docs/code-o
 
 ## Communication Channels
 
-- GitHub Issues, Pull requests, and Discussions.
+- GitHub Issues, Pull requests, and Discussions
 - [Slack channel](https://cloud-native.slack.com/archives/C078PHYK38W) for real-time communication
 
 ## Roadmap and Release Process
