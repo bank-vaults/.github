@@ -11,7 +11,7 @@ We believe in the power of community-driven development, and we are constantly i
 
 - [Website](https://bank-vaults.dev) (and documentation)
 - Email: [team@bank-vaults.dev](mailto:team@bank-vaults.dev)
-- [Slack](https://eti.cisco.com/slack/)
+- [Slack](https://cloud-native.slack.com/archives/C078PHYK38W/)
 - [Contributing guide](https://bank-vaults.dev/docs/contributing/)
 - [Security procedures](https://bank-vaults.dev/docs/security/)
 - [Code of Conduct](https://bank-vaults.dev/docs/code-of-conduct/)
