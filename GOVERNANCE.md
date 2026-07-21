@@ -38,6 +38,16 @@ Maintainers are responsible for the overall direction and quality of the project
 
 New maintainers are nominated by existing maintainers and approved through a consensus process and will be added to the `maintainers` team.
 
+### Emeritus Maintainers
+
+Maintainers who step away from active maintenance become emeritus maintainers, in recognition of their contributions to the project. Emeritus maintainers:
+
+- Are listed in the Alumni section of the [MAINTAINERS.md](https://github.com/bank-vaults/bank-vaults/blob/main/MAINTAINERS.md) file
+- No longer carry maintainer duties or privileges, and are not counted towards consensus
+- Remain welcome in all community channels and are valued for their historical context and advice
+
+A maintainer becomes emeritus at their own request, or by maintainer consensus after an extended period of inactivity. An emeritus maintainer may return to active maintainership through the same nomination and consensus process as new maintainers.
+
 ## Decision Making
 
 Bank-Vaults follows a consensus-seeking decision-making process. For most decisions, we strive for agreement among maintainers. If consensus cannot be reached, the project lead (or a designated decision-maker) will make the final call.
